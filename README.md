@@ -1,2 +1,2 @@
-# algorithms
-Fundamental Algorithms for junior software engineers
+# Algorithms
+### Fundamental Algorithms for junior software engineers
