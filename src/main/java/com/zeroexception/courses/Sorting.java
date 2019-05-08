@@ -1,6 +1,5 @@
 package com.zeroexception.courses;
 
-import java.util.Arrays;
 
 public class Sorting {
 
