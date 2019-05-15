@@ -26,6 +26,11 @@ public class Sorting {
     return b;
   }
 
+
+  public int[] bubbleSort(int[] a) {
+    return null;
+  }
+
   private int[]  clone(int a[]) {
     int[] b = new int[a.length];
     for (int i = 0; i < a.length; ++i) {

@@ -23,4 +23,11 @@ class SortingTest {
     assertArrayEquals(b, new int[] {0, 1, 4, 4, 6, 9});
 
   }
+
+  @Test void bubbleSort() {
+    int[] a = new int[] {1, 4, 6, 9, 4, 0};
+    int[] b = sort.bubbleSort(a);
+
+    assertArrayEquals(b, new int[] {0, 1, 4, 4, 6, 9});
+  }
 }
