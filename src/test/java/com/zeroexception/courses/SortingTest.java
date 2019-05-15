@@ -14,7 +14,6 @@ class SortingTest {
 
   }
 
-
   @Test
   public void selectionSort() {
 
