@@ -4,40 +4,41 @@ package com.zeroexception.courses;
 public class Sorting {
 
 
-  public int[] selectionSort(int[] a) {
+  public void selectionSort(int[] a) {
 
-    int[] b = clone(a);
-
-    for (int i = 0; i < b.length - 1; ++i) {
-      int min = b[i];
+    for (int i = 0; i < a.length - 1; ++i) {
+      int min = a[i];
       int index = i;
-      for (int j = i+1; j < b.length; ++j) {
-        if (min > b[j]) {
-          min = b[j];
+      for (int j = i+1; j < a.length; ++j) {
+        if (min > a[j]) {
+          min = a[j];
           index = j;
         }
       }
       if (index != i) {
-        int t = b[index];
-        b[index] = b[i];
-        b[i] = t;
+        int t = a[index];
+        a[index] = a[i];
+        a[i] = t;
       }
     }
-    return b;
   }
 
 
-  public int[] bubbleSort(int[] a) {
-    return null;
+  public void bubbleSort(int[] a) {
   }
 
-  private int[]  clone(int a[]) {
-    int[] b = new int[a.length];
-    for (int i = 0; i < a.length; ++i) {
-      b[i] = a[i];
-    }
-    return b;
+  public void insertionSort(int[] a) {
   }
+
+
+  public void mergeSort(int[] a) {
+  }
+
+
+  public void quickSort(int[] a) {
+  }
+
+  
 
 
 }
