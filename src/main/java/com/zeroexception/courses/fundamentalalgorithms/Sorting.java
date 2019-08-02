@@ -1,4 +1,4 @@
-package com.zeroexception.courses;
+package com.zeroexception.courses.fundamentalalgorithms;
 
 
 public class Sorting {
