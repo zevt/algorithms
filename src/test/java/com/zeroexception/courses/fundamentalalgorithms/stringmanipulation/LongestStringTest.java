@@ -21,4 +21,12 @@ class LongestStringTest {
     assertEquals(output, longestStrings(input));
   }
 
+  @Test
+  public void longestStringsTest2() {
+    String[] input = new String[] {"know", "bad", "good"};
+    List<String> output = Arrays.asList("know", "good");
+
+    assertEquals(output, longestStrings(input));
+  }
+
 }
