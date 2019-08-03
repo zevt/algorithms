@@ -1,10 +1,10 @@
 package com.zeroexception.courses.fundamentalalgorithms.datastructure;
 
 
-public class Sorting {
+public interface Sorting {
 
 
-  public void selectionSort(int[] a) {
+  static void selectionSort(int[] a) {
 
     for (int i = 0; i < a.length - 1; ++i) {
       int min = a[i];
@@ -24,7 +24,7 @@ public class Sorting {
   }
 
 
-  public void bubbleSort(int[] a) {
+  static void bubbleSort(int[] a) {
     for (int i = 0; i < a.length - 1; ++i) {
       for (int j = a.length - 1; j > 0;--j) {
         if (a[j] < a[j - 1]) {
@@ -36,15 +36,15 @@ public class Sorting {
     }
   }
 
-  public void insertionSort(int[] a) {
+  static void insertionSort(int[] a) {
   }
 
 
-  public void mergeSort(int[] a) {
+  static void mergeSort(int[] a) {
   }
 
 
-  public void quickSort(int[] a) {
+  static void quickSort(int[] a) {
   }
 
   
