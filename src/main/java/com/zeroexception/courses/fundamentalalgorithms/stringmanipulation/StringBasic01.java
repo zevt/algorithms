@@ -14,7 +14,7 @@ public class StringBasic01 {
 		 * Using charAt(int position) function of Java String to check if a input String is palindrome
 		 *
 		 */
-		boolean is(String s) {
+		boolean isPalindrome(String s) {
 
 			return false;
 		}
