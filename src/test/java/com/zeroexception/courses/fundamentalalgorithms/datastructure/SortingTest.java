@@ -1,5 +1,6 @@
 package com.zeroexception.courses.fundamentalalgorithms.datastructure;
 
+import static com.zeroexception.courses.fundamentalalgorithms.datastructure.Sorting.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -7,7 +8,6 @@ import org.junit.jupiter.api.Test;
 
 class SortingTest {
 
-  private Sorting sort = new Sorting();
 
   @BeforeEach
   void setUp() {
@@ -15,18 +15,18 @@ class SortingTest {
   }
 
   @Test
-  public void selectionSort() {
+  public void selectionSortTest() {
 
     int[] a = new int[] {1, 4, 6, 9, 4, 0};
-    sort.selectionSort(a);
+    selectionSort(a);
 
     assertArrayEquals(a, new int[] {0, 1, 4, 4, 6, 9});
 
   }
 
-  @Test void bubbleSort() {
+  @Test void bubbleSortTest() {
     int[] a = new int[] {1, 4, 6, 9, 4, -4};
-    sort.bubbleSort(a);
+    bubbleSort(a);
 
     assertArrayEquals(a, new int[] {-4, 1, 4, 4, 6, 9});
   }
