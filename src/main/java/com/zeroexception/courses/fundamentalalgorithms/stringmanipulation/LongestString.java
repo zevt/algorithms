@@ -1,6 +1,7 @@
 package com.zeroexception.courses.fundamentalalgorithms.stringmanipulation;
 
 
+import java.util.LinkedList;
 import java.util.List;
 
 public interface LongestString {
@@ -17,6 +18,18 @@ public interface LongestString {
    * output = ["know", "good"]
    */
   static List<String> longestStrings(String[] inputs) {
-    return null;
+    List<String> list = new LinkedList<>();
+    int maxLength = 0;
+    for (String s: inputs) {
+      if (s.length() == maxLength) {
+        list.add(s);
+      } else if (s.length() > maxLength) {
+        list.clear();
+        list.add(s);
+        maxLength = s.length();
+      }
+    }
+
+    return list;
   }
 }
