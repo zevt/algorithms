@@ -1,4 +1,4 @@
-package com.zeroexception.courses.fundamentalalgorithms;
+package com.zeroexception.courses.fundamentalalgorithms.datastructure;
 
 import static org.junit.jupiter.api.Assertions.*;
 
