@@ -3,7 +3,7 @@ package com.zeroexception.courses.fundamentalalgorithms.stringmanipulation;
 /**
  * Solve basic problems using Java build-in functions manipulating String
  */
-public class StringBasic01 {
+public interface StringBasic01 {
 
 		/**
 		 * Palindrome is a String which give the same result by reading from left to right and from right to left.
@@ -14,7 +14,7 @@ public class StringBasic01 {
 		 * Using charAt(int position) function of Java String to check if a input String is palindrome
 		 *
 		 */
-		boolean isPalindrome(String s) {
+		static boolean isPalindrome(String s) {
 				int i = 0, j = s.length() - 1;
 				while (i < j) {
 						if (s.charAt(i) != s.charAt(j))
