@@ -1,6 +1,7 @@
 package com.zeroexception.courses.fundamentalalgorithms.stringmanipulation;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface LongestString {
@@ -17,6 +18,19 @@ public interface LongestString {
    * output = ["know", "good"]
    */
   static List<String> longestStrings(String[] inputs) {
-    return null;
+    int longest = 0;
+    for(int i = 0; i < inputs.length; i++){
+      if(inputs[i].length() > longest){
+        longest = inputs[i].length();
+      }
+    }
+    List<String> longStrings = new ArrayList<>();
+
+    for(int i = 0; i < inputs.length; i++) {
+      if(inputs[i].length() == longest){
+        longStrings.add(inputs[i]);
+      }
+    }
+    return longStrings;
   }
 }

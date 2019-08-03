@@ -14,9 +14,14 @@ public interface StringBasic01 {
 		 * Using charAt(int position) function of Java String to check if a input String is palindrome
 		 *
 		 */
-		static boolean isPalindrome(String s) {
-
-			return false;
+		static boolean isPalindrome(String input) {
+			for (int i = 0; i < input.length(); i++){
+					int len = input.length() - 1 - i;
+					if(input.charAt(i) != input.charAt(len)){
+							return false;
+					}
+			}
+			return true;
 		}
 
 
