@@ -90,18 +90,25 @@ public interface StringBasic01 {
    * @return the number of appearances
    * Suggest: use method indexOf
    */
-  static int countAppearances(String article, String keyword) {
-  	int counter = 0;
-  	int fromIndex = 0;
-  	int position = article.indexOf(keyword, fromIndex);
-  	while(position >= 0) {
-  		counter++;
-  		fromIndex = position + keyword.length();
-  		position = article.indexOf(keyword, fromIndex);
-	  }
-  	return counter;
-  }
+//  static int countAppearances(String article, String keyword) {
+//  	int counter = 0;
+//  	int fromIndex = 0;
+//  	int position = article.indexOf(keyword, fromIndex);
+//  	while(position >= 0) {
+//  		counter++;
+//  		fromIndex = position + keyword.length();
+//  		position = article.indexOf(keyword, fromIndex);
+//	  }
+//  	return counter;
+//  }
 
+	static int countAppearances(String article, String keyword) {
+		if(keyword.isEmpty()){
+			return 0;
+		}
+		String newArticle = article.replace(keyword, "");
+		return (article.length() - newArticle.length())/keyword.length();
+	}
 
 
 }
