@@ -91,14 +91,15 @@ public interface StringBasic01 {
    * Suggest: use method indexOf
    */
   static int countAppearances(String article, String keyword) {
-  	String[] words = article.split(" ");
-  	int count = 0;
-  	for(int i = 0; i < words.length; i++){
-  		if(words[i].equalsIgnoreCase(keyword)){
-  			count++;
-		  }
+  	int counter = 0;
+  	int fromIndex = 0;
+  	int position = article.indexOf(keyword, fromIndex);
+  	while(position >= 0) {
+  		counter++;
+  		fromIndex = position + keyword.length();
+  		position = article.indexOf(keyword, fromIndex);
 	  }
-		return count;
+  	return counter;
   }
 
 
