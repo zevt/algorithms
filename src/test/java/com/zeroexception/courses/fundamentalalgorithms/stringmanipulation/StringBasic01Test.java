@@ -79,4 +79,11 @@ class StringBasic01Test {
     String keyword = "one-bedroom";
     assertEquals(2, countAppearances(article, keyword));
   }
+
+  @Test
+  void testCountAppearances2() {
+    String article = "I I I";
+    String keyword = "I";
+    assertEquals(3,countAppearances(article, keyword));
+  }
 }
