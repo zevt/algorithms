@@ -1,6 +1,7 @@
 package com.zeroexception.courses.fundamentalalgorithms.stringmanipulation;
 
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,7 +30,7 @@ public interface LongestString {
         maxLength = s.length();
       }
     }
-
-    return list;
+    String[] sss= list.toArray(new String[] {});
+    return Arrays.asList(sss);
   }
 }
