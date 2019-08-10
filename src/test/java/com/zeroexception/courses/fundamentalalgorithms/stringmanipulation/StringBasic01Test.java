@@ -87,12 +87,6 @@ class StringBasic01Test {
     assertEquals(3,countAppearances(article, keyword));
   }
 
-  @Test
-  void testCountAppearances3() {
-    String article = "I I I";
-    String keyword = "I";
-    assertEquals(3,countAppearances(article, keyword));
-  }
 
   @Test
   void testCountAppearance4() {

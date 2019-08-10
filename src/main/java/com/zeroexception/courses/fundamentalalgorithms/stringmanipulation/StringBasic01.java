@@ -5,6 +5,7 @@ package com.zeroexception.courses.fundamentalalgorithms.stringmanipulation;
  * This exercise aims to put following Java methods into action:
  * charAt(), indexOf(), length(), and substring(), trim()
  * replace()
+ * split()
  * toLowerCase() and toUpperCase()
  * startsWith() and endsWith(),
  * equals() and equalsIgnoreCase()
