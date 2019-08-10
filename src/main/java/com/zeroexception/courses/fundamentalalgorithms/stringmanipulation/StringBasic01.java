@@ -41,7 +41,10 @@ public interface StringBasic01 {
 		 */
 
 		static int sentenceCount(String paragraph) {
-				return 0;
+			if (paragraph != null && !paragraph.isEmpty()) {
+				return paragraph.split("\\.").length;
+			}
+			else return 0;
 		}
 
 		/**
