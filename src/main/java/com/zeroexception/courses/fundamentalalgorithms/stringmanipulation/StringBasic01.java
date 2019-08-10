@@ -41,8 +41,9 @@ public interface StringBasic01 {
 		 * Given a paragraph of text, which unfortunately contains bad writing style:
 		 * error1: each sentence doesn't begin with a capital letter
 		 * error2: there is space between commas and previous letter, like "2 pets , a cat "
-		 * error3: there is space between period and previous letter, like "a dog ."
-		 * error4: there is more than one space between words, like "a     dog"
+		 * error3: there is no space between commas and the next letter, like "2 pets,a cat "
+		 * error4: there is space between period and previous letter, like "a dog ."
+		 * error5: there is more than one space between words, like "a     dog"
 		 * Write code to correct the paragraph.
 		 ** Example: paragraph = "i have 2 pets , a cat  and a dog. the cat's name is Milo . the dog's name is Ricky"
 		 ** output = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky"
