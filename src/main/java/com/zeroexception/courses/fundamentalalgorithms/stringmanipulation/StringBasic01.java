@@ -24,40 +24,6 @@ public interface StringBasic01 {
 		return false;
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		/**
 		 * Given a paragraph of text, calculate how many sentences included in the paragraph.
 		 ** Example: paragraph = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky";
