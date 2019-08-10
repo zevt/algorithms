@@ -28,6 +28,18 @@ class StringBasic01Test {
   }
 
   @Test
+  void testSentenceCount_when_paragraph_empty() {
+    String paragraph = "";
+    assertEquals(0, sentenceCount(paragraph));
+  }
+
+  @Test
+  void testSentenceCount_when_paragraph_null() {
+    String paragraph = null;
+    assertEquals(0, sentenceCount(paragraph));
+  }
+
+  @Test
   void testSentenceCount() {
     String paragraph = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky";
     assertEquals(3, sentenceCount(paragraph));
