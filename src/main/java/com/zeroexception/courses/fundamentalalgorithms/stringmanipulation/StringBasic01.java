@@ -70,7 +70,20 @@ public interface StringBasic01 {
 		 * Suggest: using some of followings: split, replace, toUpperCase.
 		 */
 		static String correctParagraph(String paragraph) {
-			String text = paragraph.replaceAll(" ,",",");
+
+			String oldText = paragraph;
+			String newText = paragraph.replaceAll("  ", " ");
+			while(!oldText.equals(newText)){
+				oldText = newText;
+				newText = newText.replaceAll("  ", " ");
+			}
+
+			newText = newText.replaceAll(" ,", ",");
+			newText = newText.replaceAll(" \\.", ".");
+
+			
+
+			return newText;
 		}
 
   /**
