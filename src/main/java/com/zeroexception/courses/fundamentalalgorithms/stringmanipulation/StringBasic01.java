@@ -39,6 +39,9 @@ public interface StringBasic01 {
 		 * (Suggest: Using split function of String).
 		 */
 		static int sentenceCount(String paragraph) {
+			if(paragraph == null){
+				return 0;
+			}
 			String[] sentences = paragraph.split("\\.");
 			int count = 0;
 			for(int i =  0; i < sentences.length; i++){
@@ -87,7 +90,14 @@ public interface StringBasic01 {
    * Suggest: use method indexOf
    */
   static int countAppearances(String article, String keyword) {
-		return 0;
+  	String[] words = article.split(" ");
+  	int count = 0;
+  	for(int i = 0; i < words.length; i++){
+  		if(words[i].equalsIgnoreCase(keyword)){
+  			count++;
+		  }
+	  }
+		return count;
   }
 
 
