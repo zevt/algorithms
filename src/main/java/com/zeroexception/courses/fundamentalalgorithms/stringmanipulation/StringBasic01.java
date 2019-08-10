@@ -3,7 +3,7 @@ package com.zeroexception.courses.fundamentalalgorithms.stringmanipulation;
 /**
  * Solve basic problems using Java build-in functions manipulating String
  * This exercise aims to put following Java methods into action:
- * charAt(), indexOf(), length(), and substring(), trim(), trim()
+ * charAt(), indexOf(), length(), and substring(), trim()
  * replace()
  * toLowerCase() and toUpperCase()
  * startsWith() and endsWith(),
