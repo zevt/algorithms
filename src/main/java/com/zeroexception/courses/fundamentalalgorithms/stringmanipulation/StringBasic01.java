@@ -39,7 +39,14 @@ public interface StringBasic01 {
 		 * (Suggest: Using split function of String).
 		 */
 		static int sentenceCount(String paragraph) {
-				return 0;
+			String[] sentences = paragraph.split("\\.");
+			int count = 0;
+			for(int i =  0; i < sentences.length; i++){
+				if(!sentences[i].isEmpty()){
+					count++;
+				}
+			}
+			return count;
 		}
 
 		/**
