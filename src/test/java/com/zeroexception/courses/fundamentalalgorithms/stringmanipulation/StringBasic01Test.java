@@ -86,4 +86,20 @@ class StringBasic01Test {
     String keyword = "I";
     assertEquals(3,countAppearances(article, keyword));
   }
+
+  @Test
+  void testCountAppearances3() {
+    String article = "I I I";
+    String keyword = "I";
+    assertEquals(3,countAppearances(article, keyword));
+  }
+
+  @Test
+  void testCountAppearance4() {
+    String article = "Environmental changes are having devastating impacts on real estate across the country. Business Insider’s Aria Bendix previously reported that nearly one trillion dollars of US real estate is threatened by rising seas. In fact, by 2100, the homes of 4.7 million Americans may be vulnerable to rising sea levels.";
+
+    String keyword = "real estate";
+
+    assertEquals(2, countAppearances(article, keyword));
+  }
 }
