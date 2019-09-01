@@ -71,17 +71,26 @@ public interface StringBasic01 {
 		 */
 		static String correctParagraph(String paragraph) {
 
-			String oldText = paragraph;
-			String newText = paragraph.replaceAll("  ", " ");
-			while(!oldText.equals(newText)){
-				oldText = newText;
-				newText = newText.replaceAll("  ", " ");
+			String newText = paragraph.replaceAll("\\s{2,}+", " ");
+
+			newText = newText.replaceAll("\\s+,", ",");
+			newText = newText.replaceAll("\\s+\\.", ".");
+
+
+			String firstLetter = newText.substring(0, 1).toUpperCase();
+			newText = firstLetter + newText.substring(1);
+
+			String[] sentences = newText.split("\\.");
+			for(int i = 0; i < sentences.length; i++){
+				String temp = sentences[i].trim();
+				firstLetter = temp.substring(0, 1).toUpperCase();
+				sentences[i] = firstLetter + temp.substring(1);
 			}
-
-			newText = newText.replaceAll(" ,", ",");
-			newText = newText.replaceAll(" \\.", ".");
-
-			
+			StringBuilder newParagraph = new StringBuilder(sentences[0]);
+			for(int i = 1; i < sentences.length; i++){
+				newParagraph.append(". ").append(sentences[i]);
+			}
+			newText = newParagraph.append(".").toString();
 
 			return newText;
 		}
