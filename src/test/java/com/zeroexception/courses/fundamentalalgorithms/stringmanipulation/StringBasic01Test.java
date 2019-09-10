@@ -47,7 +47,7 @@ class StringBasic01Test {
 
   @Test
   void testCorrectParagraph_should_correct_multi_space_issue() {
-    String paragraph = "I have  2  pets, a cat and a dog  .  The cat's name is Milo. The dog's name  is Ricky.";
+    String paragraph = "I have   2  pets   , a cat and a dog  .  The cat's name is Milo. The dog's name  is Ricky.";
     String correctedParagraph = correctParagraph(paragraph);
     String result = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky.";
     assertEquals(correctedParagraph, result);
