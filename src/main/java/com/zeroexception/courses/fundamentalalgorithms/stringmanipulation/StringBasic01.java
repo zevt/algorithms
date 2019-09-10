@@ -3,7 +3,9 @@ package com.zeroexception.courses.fundamentalalgorithms.stringmanipulation;
 /**
  * Solve basic problems using Java build-in functions manipulating String
  * This exercise aims to put following Java methods into action:
- * charAt(), indexOf(), length(), and substring(), trim(), trim(), trim()
+ * charAt(), indexOf(), length(), and substring(), trim()
+ * replace()
+ * split()
  * toLowerCase() and toUpperCase()
  * startsWith() and endsWith(),
  * equals() and equalsIgnoreCase()
@@ -63,7 +65,29 @@ public interface StringBasic01 {
 		 * Suggest: using some of followings: split, replace, toUpperCase.
 		 */
 		static String correctParagraph(String paragraph) {
-				return "";
+
+			String newText = paragraph.replaceAll("\\s{2,}+", " ");
+
+			newText = newText.replaceAll("\\s+,", ",");
+			newText = newText.replaceAll("\\s+\\.", ".");
+
+
+			String firstLetter = newText.substring(0, 1).toUpperCase();
+			newText = firstLetter + newText.substring(1);
+
+			String[] sentences = newText.split("\\.");
+			for(int i = 0; i < sentences.length; i++){
+				String temp = sentences[i].trim();
+				firstLetter = temp.substring(0, 1).toUpperCase();
+				sentences[i] = firstLetter + temp.substring(1);
+			}
+			StringBuilder newParagraph = new StringBuilder(sentences[0]);
+			for(int i = 1; i < sentences.length; i++){
+				newParagraph.append(". ").append(sentences[i]);
+			}
+			newText = newParagraph.append(".").toString();
+
+			return newText;
 		}
 
   /**
@@ -84,10 +108,15 @@ public interface StringBasic01 {
    * @return the number of appearances
    * Suggest: use method indexOf
    */
-  static int countAppearances(String article, String keyword) {
-		return 0;
-  }
 
+
+	static int countAppearances(String article, String keyword) {
+		if(keyword.isEmpty()){
+			return 0;
+		}
+		String newArticle = article.replace(keyword, "");
+		return (article.length() - newArticle.length())/keyword.length();
+	}
 
 
 }

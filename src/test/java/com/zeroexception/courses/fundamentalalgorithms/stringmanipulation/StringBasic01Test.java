@@ -28,6 +28,18 @@ class StringBasic01Test {
   }
 
   @Test
+  void testSentenceCount_when_paragraph_empty() {
+    String paragraph = "";
+    assertEquals(0, sentenceCount(paragraph));
+  }
+
+  @Test
+  void testSentenceCount_when_paragraph_null() {
+    String paragraph = null;
+    assertEquals(0, sentenceCount(paragraph));
+  }
+
+  @Test
   void testSentenceCount() {
     String paragraph = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky";
     assertEquals(3, sentenceCount(paragraph));
@@ -37,7 +49,16 @@ class StringBasic01Test {
   void testCorrectParagraph_should_correct_non_capital_letter() {
     String paragraph = "i have 2 pets, a cat  and a dog. the cat's name is Milo. the dog's name is Ricky";
     String correctedParagraph = correctParagraph(paragraph);
-    String result = "I have 2 pets, a cat  and a dog. The cat's name is Milo. The dog's name is Ricky";
+    String result = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky.";
+
+    assertEquals(correctedParagraph, result);
+  }
+
+  @Test
+  void testCorrectParagraph_should_correct_multi_space_issue() {
+    String paragraph = "I have   2  pets   , a cat and a dog  .  The cat's name is Milo. The dog's name  is Ricky.";
+    String correctedParagraph = correctParagraph(paragraph);
+    String result = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky.";
     assertEquals(correctedParagraph, result);
   }
 
@@ -45,7 +66,8 @@ class StringBasic01Test {
   void testCorrectParagraph_should_correct_space_before_commas_and_period() {
     String paragraph = "i have 2 pets , a cat  and a dog. the cat's name is Milo . the dog's name is Ricky";
     String correctedParagraph = correctParagraph(paragraph);
-    String result = "I have 2 pets, a cat  and a dog. The cat's name is Milo. The dog's name is Ricky";
+    String result = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky.";
+
     assertEquals(correctedParagraph, result);
   }
 
@@ -53,7 +75,7 @@ class StringBasic01Test {
   void testCorrectParagraph_should_correct_space_after_commas_and_period() {
     String paragraph = "i have 2 pets , a cat  and a dog. the cat's name is Milo . the dog's name is Ricky";
     String correctedParagraph = correctParagraph(paragraph);
-    String result = "I have 2 pets, a cat  and a dog. The cat's name is Milo. The dog's name is Ricky";
+    String result = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky.";
     assertEquals(correctedParagraph, result);
   }
 
@@ -65,6 +87,23 @@ class StringBasic01Test {
             + "The data was compiled using HotPad's Repeat Rent Index. Each of the one-bedroom apartments analyzed in the study has been listed for rent on HotPads for longer than a month.";
 
     String keyword = "one-bedroom";
+    assertEquals(2, countAppearances(article, keyword));
+  }
+
+  @Test
+  void testCountAppearances2() {
+    String article = "I I I";
+    String keyword = "I";
+    assertEquals(3,countAppearances(article, keyword));
+  }
+
+
+  @Test
+  void testCountAppearance4() {
+    String article = "Environmental changes are having devastating impacts on real estate across the country. Business Insider’s Aria Bendix previously reported that nearly one trillion dollars of US real estate is threatened by rising seas. In fact, by 2100, the homes of 4.7 million Americans may be vulnerable to rising sea levels.";
+
+    String keyword = "real estate";
+
     assertEquals(2, countAppearances(article, keyword));
   }
 }
