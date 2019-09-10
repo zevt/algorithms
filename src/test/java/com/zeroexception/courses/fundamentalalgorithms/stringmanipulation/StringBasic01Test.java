@@ -46,16 +46,17 @@ class StringBasic01Test {
   }
 
   @Test
-  void testCorrectParagraph_should_correct_multi_space_issue() {
-    String paragraph = "I have   2  pets   , a cat and a dog  .  The cat's name is Milo. The dog's name  is Ricky.";
+  void testCorrectParagraph_should_correct_non_capital_letter() {
+    String paragraph = "i have 2 pets, a cat  and a dog. the cat's name is Milo. the dog's name is Ricky";
     String correctedParagraph = correctParagraph(paragraph);
     String result = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky.";
+
     assertEquals(correctedParagraph, result);
   }
 
   @Test
-  void testCorrectParagraph_should_correct_non_capital_letter() {
-    String paragraph = "i have 2 pets, a cat  and a dog. the cat's name is Milo. the dog's name is Ricky";
+  void testCorrectParagraph_should_correct_multi_space_issue() {
+    String paragraph = "I have   2  pets   , a cat and a dog  .  The cat's name is Milo. The dog's name  is Ricky.";
     String correctedParagraph = correctParagraph(paragraph);
     String result = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky.";
     assertEquals(correctedParagraph, result);
@@ -66,6 +67,7 @@ class StringBasic01Test {
     String paragraph = "i have 2 pets , a cat  and a dog. the cat's name is Milo . the dog's name is Ricky";
     String correctedParagraph = correctParagraph(paragraph);
     String result = "I have 2 pets, a cat and a dog. The cat's name is Milo. The dog's name is Ricky.";
+
     assertEquals(correctedParagraph, result);
   }
 
