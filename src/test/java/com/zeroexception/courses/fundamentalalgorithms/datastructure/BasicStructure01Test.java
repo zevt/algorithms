@@ -18,8 +18,9 @@ class BasicStructure01Test {
   void test_findPeaks() {
     int[] input = new int[] {2, 3, 5, 1, 4, 3, 6, 7, 9, 8};
     int[] peak = findPeaks(input);
+    int[] output = new int[] {5, 4, 9};
 
-    assertArrayEquals(input, peak);
+    assertArrayEquals(output, peak);
   }
 
   @Test
@@ -27,7 +28,9 @@ class BasicStructure01Test {
     int[] input = new int[] {2, 3, 5, 1, 4, 3, 6, 7, 9, 8};
     int[] valleys = findValleys(input);
 
-    assertArrayEquals(input, valleys);
+    int[] output = new int[] {1, 3};
+
+    assertArrayEquals(output, valleys);
   }
 
   @Test
