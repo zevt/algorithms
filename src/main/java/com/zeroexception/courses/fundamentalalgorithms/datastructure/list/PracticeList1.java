@@ -37,7 +37,19 @@ public interface PracticeList1 {
 
 
 
+  /**
+   * Given an article as a String.
+   * the article contains a lot of words.
+   * Return a list of words, sorted by its appearance in the articles, descending order
+   * (The words appears most come first, the word appears least come last.
+   *
+   * @param paragraph the article
+   * @return list of words sorted by appearance.
+   */
 
+  static List<String> sortWordByAppearance(String paragraph) {
+    return Collections.emptyList();
+  }
 
 
 

@@ -13,7 +13,7 @@ class PracticeList1Test {
 
   @Test
   void test_sortEmployeeBySalary() {
-    Employee employee = new Employee();
+    Employee employee1 = new Employee();
 
     List<Employee> employees = new ArrayList<>();
     List<Employee> sortedList = sortEmployeeBySalary(employees);
