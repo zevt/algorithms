@@ -9,6 +9,7 @@ public class Employee {
   private String name;
   private int age;
   private  Seniority seniority;
+  private double salary;
 
   public String getName() {
     return name;
@@ -33,5 +34,13 @@ public class Employee {
   public void setSeniority(
       Seniority seniority) {
     this.seniority = seniority;
+  }
+
+  public double getSalary() {
+    return salary;
+  }
+
+  public void setSalary(double salary) {
+    this.salary = salary;
   }
 }
